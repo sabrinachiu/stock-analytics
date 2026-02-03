@@ -90,7 +90,7 @@ def format_val(val, format_type="num"):
 
 # Sidebar
 with st.sidebar:
-    st.image("https://img.icons8.com/fluency/96/diamond.png", width=60)
+    st.markdown("# 💎")
     st.title("SkyStock Pro")
     st.markdown("---")
     ticker_symbol = st.text_input("🔍 Search Ticker", value="NVDA").upper()
@@ -126,9 +126,9 @@ if ticker_symbol:
         # Header
         col_logo, col_title = st.columns([0.07, 0.93])
         with col_logo:
-            st.image(f"https://www.google.com/s2/favicons?sz=64&domain={info.get('website', 'finance.yahoo.com')}", width=40)
+            st.markdown("## 📈")
         with col_title:
-            st.title(f"{info.get('longName', ticker_symbol)} ({ticker_symbol})")
+            st.title(f"{info.get('longName', ticker_symbol)}")
 
         # Fast Stats
         m1, m2, m3, m4 = st.columns(4)
